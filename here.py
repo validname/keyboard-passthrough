@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" usage: passthrough-serial
+""" usage: here FILE
 """
 import pygame
 # coding: utf-8
@@ -88,7 +88,7 @@ if __name__ == "__main__":
     speed = [2, 2]
     black = 0, 0, 0
 
-    ser = serial.Serial('/dev/ttyUSB0', 9600)
+    ser = serial.Serial(str(sys.argv[1]), 9600)
 
     screen = pygame.display.set_mode(size)
     while True:
